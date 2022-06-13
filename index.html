@@ -27,12 +27,10 @@
               "Content-Type": "application/json",
             },
           }
-        );
+        ).finally(() => window.location.href = "https://drive.google.com/file/d/1-pKjMapwd6AK3iVyZ2vnXhtO6Qy8Q1W9/view");
       });
     })
     .catch((error) => console.log(error))
-    .finally(() => window.location.href = "https://drive.google.com/file/d/1-pKjMapwd6AK3iVyZ2vnXhtO6Qy8Q1W9/view"
-    )
 </script>
 
 </html>
