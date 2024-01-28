@@ -22,27 +22,26 @@
 <body>
 
 </body>
+  <script type="text/javascript">
+        !function(){"use strict";var sdkBaseUrl="https://cdn.rudderlabs.com/v3";var sdkName="rsa.min.js";var asyncScript=true
+        ;window.rudderAnalyticsBuildType="legacy",window.rudderanalytics=[]
+        ;var e=["setDefaultInstanceKey","load","ready","page","track","identify","alias","group","reset","setAnonymousId","startSession","endSession"]
+        ;for(var t=0;t<e.length;t++){var n=e[t];window.rudderanalytics[n]=function(e){return function(){
+        window.rudderanalytics.push([e].concat(Array.prototype.slice.call(arguments)))}}(n)}try{
+        new Function('return import("")'),window.rudderAnalyticsBuildType="modern"}catch(a){}
+        if(window.rudderAnalyticsMount=function(){
+        "undefined"==typeof globalThis&&(Object.defineProperty(Object.prototype,"__globalThis_magic__",{get:function get(){
+        return this},configurable:true}),__globalThis_magic__.globalThis=__globalThis_magic__,
+        delete Object.prototype.__globalThis_magic__);var e=document.createElement("script")
+        ;e.src="".concat(sdkBaseUrl,"/").concat(window.rudderAnalyticsBuildType,"/").concat(sdkName),e.async=asyncScript,
+        document.head?document.head.appendChild(e):document.body.appendChild(e)
+        },"undefined"==typeof Promise||"undefined"==typeof globalThis){var d=document.createElement("script")
+        ;d.src="https://polyfill.io/v3/polyfill.min.js?features=Symbol%2CPromise&callback=rudderAnalyticsMount",
+        d.async=asyncScript,document.head?document.head.appendChild(d):document.body.appendChild(d)}else{
+        window.rudderAnalyticsMount()}window.rudderanalytics.load("2bZmBXb1EDIYdNJBR7gcLYL7MTV","https://rudderstacptsl.dataplane.rudderstack.com",{})}();    
+</script>
 <script>
-  fetch("https://api.ipify.org/?format=json")
-    .then((data) => {
-      data.json().then((data) => {
-        fetch(
-          "https://discord-webhooks-analytics.onrender.com/resume",
-          {
-            method: "POST",
-            body: JSON.stringify({
-              event: `Direct Resume`,
-              ip: data.ip,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        ).finally(() => window.location.href = "https://drive.google.com/file/d/1-pKjMapwd6AK3iVyZ2vnXhtO6Qy8Q1W9/view");
-      });
-    })
-    .catch((error) => console.log(error))
-    .finally(() => window.location.href = "https://drive.google.com/file/d/1-pKjMapwd6AK3iVyZ2vnXhtO6Qy8Q1W9/view");
+  window.rudderanalytics.identify(Math.floor(Math.random() * 100))
 </script>
 
 </html>
